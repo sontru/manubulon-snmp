@@ -709,7 +709,7 @@ for ($i = 0; $i < $num_int; $i++) {
             || (($pu >= $o_warn) && ($locstate = $warn_state = 1));
         if (defined($o_shortL[2])) { }
         if (!defined($o_shortL[0]) || ($locstate == 1)) {    # print full output if warn or critical state
-            $output .= sprintf("%s: %.0f%%used(%.0f%sB/%.0f%sB) ", $descr[$i], $pu, $bu, $output_metric, $to,
+            $output .= sprintf("%s: %.0f%% used(%.0f%sB/%.0f%sB) ", $descr[$i], $pu, $bu, $output_metric, $to,
                 $output_metric);
         } elsif ($o_shortL[0] == 1) {
             $output .= sprintf("%s: %.0f%% ", $descr[$i], $pu);
