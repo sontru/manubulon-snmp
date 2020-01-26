@@ -627,7 +627,7 @@ foreach my $key (sort { $$resultat{$a} cmp $$resultat{$b} } keys %$resultat) {
     my $test
         = defined($o_noreg)
         ? $$resultat{$key} eq $o_descr
-        : $$resultat{$key} =~ /$o_descr/;
+        : $$resultat{$key} =~ /\b$o_descr\b/;
     if ($test) {
 
         # get the index number of the interface
